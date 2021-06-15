@@ -1,0 +1,18 @@
+<html>
+  <head>
+    <title>LFM Test</title>
+  </head>
+  <body>
+  <div align="center" id="lfm">
+    <h1>Upload a file</h1>
+    <form method="POST" action="" enctype="multipart/form-data">
+      <p><input type="file" name="file"></p>
+      <p><input type="submit" value="Submit"></p>
+    </form>
+    <hr>
+    {% for file in files %}
+      <img src="{{ url_for('upload', filename=file) }}" style="width: 50%">
+    {% endfor %}
+  </div>
+  </body>
+</html>
