@@ -59,13 +59,16 @@ $ sudo systemctl restart docker.service
 
 ## u2net
 
+Download pretrained models 
+https://disk.yandex.ru/d/bE3gKF8vRuLXmA
+
 ### Inference run sample code:
 
 ```
 from u2net.prediction_class import Predict
 
 image = '/home/ubuntu/removebg/test.jpg'
-model_name = 'u2net/saved_models/u2net/u2net.pth'
+model_name = '/home/ubuntu/removebg/saved_models/u2net/u2net.pth'
 
 prediction = Predict(model_name)
 prediction.predict(image)
