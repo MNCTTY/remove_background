@@ -1,0 +1,17 @@
+version: '2.3'
+
+services:
+  removebg:
+    restart: always
+    container_name: removebg
+    build:
+      context: .
+      dockerfile: Dockerfile
+    runtime: nvidia
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+    image: removebg:latest
+    volumes:
+      - .:/removebg
+    command: bash -c "gunicorn --access-logfile - -w 1 --bind 0.0.0.0:5000 app:app --timeout 15000"
+    network_mode: host

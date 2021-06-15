@@ -1,0 +1,10 @@
+flask==1.1.2
+gunicorn==20.0.4
+numpy==1.19.5
+torch==1.7.0
+torchvision==0.8.1
+scipy==1.5.4
+Pillow==8.2.0
+imgaug==0.4.0
+h5py==2.10.0
+opencv-python==4.5.1.48
