@@ -60,7 +60,7 @@ $ sudo systemctl restart docker.service
 ## u2net
 
 Download pretrained models 
-https://disk.yandex.ru/d/bE3gKF8vRuLXmA
+(link to the storage)
 
 ### Inference run sample code:
 
