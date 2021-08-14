@@ -13,6 +13,12 @@
     {% for file in files %}
       <img src="{{ url_for('upload', filename=file) }}" style="width: 50%">
     {% endfor %}
+    {% for video_file in video_files %}
+      <video controls="" autoplay="" name="media">
+        <source src={{ url_for('upload', filename=video_file) }} type="video/mp4">
+         Your browser does not support the video tag.
+      </video>
+    {% endfor %}
   </div>
   </body>
 </html>
